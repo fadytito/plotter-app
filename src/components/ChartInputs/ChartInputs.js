@@ -26,7 +26,7 @@ export const ChartInputs = ({ onFillChartInputs }) => {
       return;
     };
     onFillChartInputs({ dimensionInput, measureInputs });
-  }, [dimensionInput, measureInputs]);
+  }, [dimensionInput, measureInputs, onFillChartInputs]);
 
   return (
     <>

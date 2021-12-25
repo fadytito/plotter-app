@@ -16,7 +16,7 @@ export const Columns = () => {
 
   useEffect(() => {
     fetchData(getColumns)
-  }, [getColumns]);
+  }, [fetchData]);
 
   const drag = (column, e) => {
     e.dataTransfer.setData("column", JSON.stringify(column));

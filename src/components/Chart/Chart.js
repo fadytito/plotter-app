@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import { ChartGraph, ChartInputs, Error, Loader } from "..";
 import { useDataSource } from "../../hooks/useDataSource";
 
@@ -37,7 +37,7 @@ export const Chart = () => {
 
   const [dimension, ...measures] = values ?? [];
 
-  const fillChartInputsHandler = ({ dimensionInput, measureInputs }) => {
+  const fillChartInputsHandler = useCallback(({ dimensionInput, measureInputs }) => {
     if (!dimensionInput || !measureInputs.length) {
       setData(null);
       setHasInputs(false);
@@ -45,7 +45,7 @@ export const Chart = () => {
     }
     setHasInputs(true);
     fetchData(getValues({ dimensionInput, measureInputs }));
-  };
+  }, [fetchData]);
 
   return (
     <>
