@@ -2,8 +2,8 @@ import React from 'react';
 
 export const Loader = ({children}) => {
     return (
-        <h2 className="center">
+        <h3 className="center">
             {children}
-        </h2>
+        </h3>
     );
 }

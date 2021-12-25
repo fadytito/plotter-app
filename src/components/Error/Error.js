@@ -2,8 +2,8 @@ import React from 'react';
 
 export const Error = ({children}) => {
     return (
-        <h2 className="error center">
+        <h4 className="error center">
             {children}
-        </h2>
+        </h4>
     );
 }

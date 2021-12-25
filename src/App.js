@@ -9,9 +9,9 @@ function App() {
         <h2>Columns</h2>
         <Columns />
       </ColumnsContainer>
-      <div>
+      <ChartContainer>
         <Chart />
-      </div>
+      </ChartContainer>
     </div>
   );
 }
@@ -20,6 +20,10 @@ const ColumnsContainer = styled.div`
   border: 1px solid black;
   grid-row-end: 1;
   padding: 0 1rem;
+`;
+
+const ChartContainer = styled.div`
+  overflow: hidden;
 `;
 
 export default App;
